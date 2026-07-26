@@ -1,0 +1,109 @@
+  .maincontainer {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+    font-family: Oswald;
+    
+  }
+  .maincontainer_login {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-wrap: wrap;
+    font-family: Oswald;
+    
+  }
+  .box {
+    border: 0.6px solid #6d6b6b;
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    
+  }
+  .box_login {
+    border: 0.6px solid #6d6b6b;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    
+  }
+  .box_display {
+    border: 0.6px solid #6d6b6b;
+    width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    
+  }
+  .textStyle{
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 28px;
+    color:darkgreen;
+  }
+  .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboardbox{
+    width: 200px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background: #f7f1e3;
+    margin: 10px;
+  }
+  .dashboardcontainer {
+    
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    font-family: Oswald;
+    
+  }
+.appebar{
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background: #2c3e50;
+  align-items: center;
+  
+}
+.logoStyle{
+    font-family: Oswald;
+    font-weight: bold;
+    font-size: 28px;
+    color: #fff;
+    margin-left: 10px;
+}
+.itemdashboard{
+  font-size:18px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: start flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.span_style{
+  margin-left: 6px;
+  transition:  0.3s ease;
+}
+.span_style:hover{
+  margin-left: 6px;
+  color:#f7b731;
+  font-weight: 800px;
+ 
+}

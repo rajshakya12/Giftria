@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="box_display">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div style="display: flex; align-items: center">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    width: 135px;
+                    justify-content: space-between;
+                    padding: 5px;
+                    border-radius: 5px;
+                  "
+                >
+                  <span
+                    ><img
+                      src="/images/gift-box.png"
+                      style="width: 33px; height: 33px"
+                  /></span>
+                  <span class="textStyle">Gifteria</span>
+                </div>
+                <span style="margin-left: auto"
+                  >
+                  <a href='/product/product_interface'>
+                  <img src="/images/shooping-cart.png"
+                    style="width: 33px; height: 33px; cursor:pointer; text-decoration: none;"
+                /></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <hr />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Picture</th>
+                    <th scope="col">update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% data.map((item,index)=>{ %>
+                    <tr>
+                        <!-- Isliye index+1 kiya gaya kyunki index 0 se start hota hai -->
+                     <td><%=index+1 %></td>
+                        <td><%=item.productid %>/<br><%=item.productname %></td>
+                        <td><%=item.categoryname %><br><%=item.subcategoryname %></td>
+                        <td><s><%=item.productrate %></s><br><%=item.productoffer %></td>
+                        <td><%=item.weight %></td>
+                        <td><%=item.stock %></td>
+                        <!-- Isme hyperlink diya gaya hai jisse user picture par click karke uska bada version dekh sakta hai. -->
+                        <td><a href="/product/show_picture/<%= item.productid %>/<%= item.productname %>/<%= item.productpicture %>"><img src="/images/<%= item.productpicture %>" style="width:40px; height:40px; border-radius:5px;" /></a></td <!-- ese mein hyoperlink diya gaya hai jisse user picture pe click karke uska bada version dekh sake -->
+                        <td> <a href="/product/edit_delete_view/<%=item.productid %>" style="cursor: pointer; text-decoration: none;">Edit/Delete</a></td>
+                    </tr>
+                    <% }) %>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

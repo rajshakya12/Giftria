@@ -1,0 +1,12 @@
+<html>
+    <center>
+        <form action="/product/final_picture_edit" enctype="multipart/form-data" method="post"><!-- new picture  lagne aur edit karne ke kaam aayge  form ban  hai -->
+            <input type="hidden" name="productid" value="<%=data.id %>">
+            <h2><%=data.name %></h2>
+            <img src="/images/<%=data.picture %>" width="400"><br><br>
+            <b>Select New Picture:</b>
+            <input type="file" name="picture">
+            <input type="submit" value="edit picture">
+        </form>
+    </center>
+</html>

@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+<script src="/javascripts/gift_data.js"></script>
+</head>
+
+<form action="/product/product_submit" method="post" enctype="multipart/form-data">
+<div class="maincontainer">
+    <div class="box">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div style="display:flex; align-items:center;">
+
+                        <div style="display:flex; align-items:center; width:135px; justify-content:space-between; padding:5px; border-radius:5px;">
+                            <span>
+                                <img src="/images/gift-box.png" style="width:33px; height:33px;">
+                            </span>
+
+                            <span class="textstyle">Gifteria</span>
+                        </div>
+
+                        <span style="margin-left:auto;">
+                            <a href='/product/display_all'>
+                                <img src="/images/medical-report.png" style="width: 33px; height: 33px; cursor:pointer; text-decoration: none;">
+                                
+                            </a>
+                        </span>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"style=" margin-top:10px">
+                    <select class="form-select"  id="categoryid"name="categoryid">
+                        <option selected>Select the category</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6" style=" margin-top:10px">
+                    <select required  class="form-select" id="subcategoryid" name="subcategoryid">
+                        <option selected>Select the subcategory</option>
+                    </select>
+                </div>
+            </div>
+                <div class="row">
+    <div class="col-md-12" style="margin-top:6px;">
+        <input required class="form-control" name="productname" type="text" placeholder="Product Name"/>
+    </div>
+</div>
+
+<div class="row">
+    <div required class="col-md-6" style="margin-top:6px;">
+        <input class="form-control" name="productrate" type="text" placeholder="Product Rate"/>
+    </div>
+
+    <div required class="col-md-6" style="margin-top:6px;">
+        <input class="form-control" name="productoffer" type="text" placeholder="Product Offer"/>
+    </div>
+</div>
+
+<div class="row">
+    <div  required class="col-md-6" style="margin-top:6px;">
+        <input class="form-control" name="weight" type="text" placeholder="Product Weight"/>
+    </div>
+
+    <div class="col-md-6" >
+        <input  required class="form-control" name="stock" type="text" placeholder="Product Stock"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6" style="margin-top:6px;">
+    <input  required class="form-control" type="file" id="picture" name="picture">
+    </div>
+
+    <div class="col-md-6" style="display:flex; justify-content:center;">
+       <span >
+       <img id="p_image" src="/images/image.png" style="width: 40px; height: 40px; border-radius: 5px; ">
+        </span>
+    </div>
+</div>
+
+<div class="row" style="margin-top:6px; ">
+    <div class="col-md-6 center" style="margin-top:10px;">
+    <button type="submit" class="btn btn-primary" style="width:70%;">submit</button>
+
+    </div>
+
+    <div class="col-md-6 center" style="margin-top:10px;">
+      <button type="reset" class="btn btn-secondary" style="width:70%;">reset</button>
+    </div>
+</div>
+<div class="row" style="margin-top: 6px;"> <div class="col-md-12 center" > <%=message %> </div> </div>
+</form>
+
+</html>
