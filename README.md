@@ -93,5 +93,5 @@ npm start
 ### Open in your browser
 
 ```text
-http://localhost:3000
+http://localhost:3000/admin/login_interface
 ```
